@@ -2,20 +2,20 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-    
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter your name: ");
+      
+        System.out.println("Welcome to the Question and Answer Game!");
+        System.out.println("What is the capital of France?");
 
-        String name = scanner.nextLine();
+        String userAnswer = scanner.nextLine();
 
-        System.out.print("Enter your age: ");
+        if (userAnswer.equalsIgnoreCase("Paris")) {
+            System.out.println("Correct! Paris is the capital of France.");
+        } else {
+            System.out.println("Incorrect. The correct answer is Paris.");
+        }
 
-        int age = scanner.nextInt();
-
-        System.out.println("Hello, " + name + "! You are " + age + " years old.");
-
-    
         scanner.close();
     }
 }
